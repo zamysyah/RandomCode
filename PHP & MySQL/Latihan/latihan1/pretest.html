@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Anggota Tim Basket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="submit"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: #007bff;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pendaftaran Anggota Tim Basket</h1>
+        <form id="registrationForm">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" required>
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="text" id="telepon" name="telepon" required>
+            <input type="submit" value="Daftar Sekarang">
+        </form>
+        <div id="confirmationMessage" style="display: none;">
+            <h2>Terima kasih telah mendaftar!</h2>
+            <p>Berikut adalah detail pendaftaran Anda:</p>
+            <table>
+                <tr>
+                    <th>Keterangan</th>
+                    <th>Detail</th>
+                </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td id="namaDetail"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td id="emailDetail"></td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td id="alamatDetail"></td>
+                </tr>
+                <tr>
+                    <td>Nomor Telepon</td>
+                    <td id="teleponDetail"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Mengambil nilai input
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var alamat = document.getElementById("alamat").value;
+            var telepon = document.getElementById("telepon").value;
+
+            // Menampilkan detail pendaftaran
+            document.getElementById("namaDetail").innerText = nama;
+            document.getElementById("emailDetail").innerText = email;
+            document.getElementById("alamatDetail").innerText = alamat;
+            document.getElementById("teleponDetail").innerText = telepon;
+
+            // Menampilkan pesan konfirmasi
+            document.getElementById("registrationForm").style.display = "none";
+            document.getElementById("confirmationMessage").style.display = "block";
+        });
+    </script>
+</body>
+</html>

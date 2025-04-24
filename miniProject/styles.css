@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 70px; /* Menambahkan padding atas untuk mengkompensasi ketinggian navbar */
+}
+
+header {
+    background-color: #00bcd4; /* Warna biru tosca */
+    padding: 10px 0;
+    position: fixed; /* Menetapkan posisi navbar */
+    width: 100%; /* Lebar penuh */
+    z-index: 1000; /* Menentukan kedalaman tumpukan */
+    top: 0; /* Meletakkan navbar di bagian atas halaman */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-title {
+    color: #fff;
+    font-size: 24px;
+}
+
+.navbar-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-right: 20px;
+}
+
+.navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-links li a:hover {
+    color: #cfd8dc; /* Warna abu-abu muda saat hover */
+}
+
+.main-content {
+    text-align: center;
+    background-image: url('gambar2.jpg'); /* Ganti 'background.jpg' dengan nama file gambar yang Anda gunakan */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Mengisi tinggi layar penuh */
+}
+
+.centered-text {
+    color: #333; /* Warna teks hitam */
+    font-size: 48px; /* Ukuran teks */
+    margin: 0; /* Menghapus margin bawaan */
+    padding-top: 20vh; /* Jarak dari atas layar */
+}
