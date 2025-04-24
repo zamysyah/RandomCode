@@ -1,0 +1,2 @@
+
+    int bilangan, terkecil;
