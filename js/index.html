@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Elements</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .element {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hide Elements</h1>
+        <div id="element1" class="element">Element tanpa class</div>
+        <div class="element kelas">Element dengan class</div>
+        <a href="#" id="element3" class="element">Element dengan atribut href</a>
+        <div>
+            <button id="hideE1">Hide Element 1</button>
+            <button id="hideClass">Hide Elements with Class</button>
+            <button id="hideAttr">Hide Elements with Attribute</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#hideE1").click(function() {
+                $("#element1").toggle();
+            });
+
+            $("#hideClass").click(function() {
+                $(".kelas").toggle();
+            });
+
+            $("#hideAttr").click(function() {
+                $("[href='#']").toggle();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Information</h1>
+        <div id="food-info"></div>
+        <button id="fetch-food">Fetch Food</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Variable
+            const apiUrl = "https://cafe-cookies.p.rapidapi.com/";
+
+            // Blok Kondisional
+            function displayFoodInfo(food) {
+                if (food && food.length > 0) {
+                    const firstFood = food[0];
+                    $("#food-info").html(`
+                        <h2>${firstFood.name}</h2>
+                        <img src="${firstFood.image}" alt="${firstFood.name}">
+                        <p>${firstFood.description}</p>
+                    `);
+                } else {
+                    $("#food-info").html("<p>No food found</p>");
+                }
+            }
+
+            // Fungsi
+            function fetchFood() {
+                $.ajax({
+                    url: 'https://rapidapi.com/cafe-coookies-cafe-coookies-default/api/cafe-cookies',
+                    headers: {
+                        'X-RapidAPI-Key': '4f27de9679msh60c0fb73ff29d3dp17a412jsne1df1f070ede',
+                        'X-RapidAPI-Host': 'cafe-cookies.p.rapidapi.com'
+                    },
+                    method: "GET",
+                    success: function(response) {
+                        if (response && response.length > 0) {
+                            displayFoodInfo(response);
+                        } else {
+                            displayFoodInfo(null);
+                        }
+                    },
+                    error: function() {
+                        displayFoodInfo(null);
+                    }
+                });
+            }
+
+            // jQuery Event
+            $("#fetch-food").click(function() {
+                fetchFood();
+            });
+
+            // jQuery DOM
+            $("#food-info").on("click", "img", function() {
+                alert("Clicked on food image!");
+            });
+        });
+    </script>
+</body>
+</html>

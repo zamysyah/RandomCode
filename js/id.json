@@ -1,0 +1,60 @@
+{
+  "apis": [
+    {
+      "apiName": "Blibli",
+      "authentication": "API KEY",
+      "description": "API untuk penjual di Blibli.",
+      "developer": {
+        "name": "Blibli.com Dev",
+        "profileUrl": null
+      },
+      "documentationUrl": "https://seller-api.blibli.com/home",
+      "status": true
+    },
+    {
+      "apiName": "Lazada",
+      "authentication": "API KEY",
+      "description": "API resmi Lazada untuk layanan Product, Order, Finance, Logistic, Seller, dan System dari Lazada.",
+      "developer": {
+        "name": "Lazada Dev",
+        "profileUrl": null
+      },
+      "documentationUrl": "https://open.lazada.com/doc/doc.htm",
+      "status": true
+    },
+    {
+      "apiName": "Matahari Mall API for Seller",
+      "authentication": "API KEY",
+      "description": "API untuk penjual di Matahari Mall.",
+      "developer": {
+        "name": "Matahari Mall Dev",
+        "profileUrl": null
+      },
+      "documentationUrl": "http://docs.apiforseller.apiary.io",
+      "status": true
+    },
+    {
+      "apiName": "Shopee",
+      "authentication": "API KEY",
+      "description": "API resmi Shopee untuk integrasi berbagai layanan dari Shopee.",
+      "developer": {
+        "name": "Shopee Dev",
+        "profileUrl": null
+      },
+      "documentationUrl": "https://open.shopee.com/documents",
+      "status": true
+    },
+    {
+      "apiName": "Tokopedia.com API",
+      "authentication": "API KEY",
+      "description": "API ini memungkinkan Anda untuk mengintegrasikan sistem Anda ke dalam Tokopedia.",
+      "developer": {
+        "name": "Tokopedia.com Dev",
+        "profileUrl": null
+      },
+      "documentationUrl": "https://developer.tokopedia.com/openapi/guide",
+      "status": true
+    }
+  ],
+  "categoryName": "E-Commerce"
+}

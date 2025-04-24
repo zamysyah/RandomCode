@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping List</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  #container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    animation: colorChange 2s infinite alternate; /* Animasi warna */
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    padding: 10px 0;
+  }
+  input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    margin-right: 10px;
+  }
+  button {
+    padding: 8px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  @keyframes colorChange {
+    from { color: #333; }
+    to { color: #f00; }
+  }
+</style>
+</head>
+<body>
+<div id="container">
+  <h1>Shopping List</h1>
+  <input type="text" id="itemInput" placeholder="Add new item">
+  <button id="addItemBtn">Add Item</button>
+  <ul id="shoppingList"></ul>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const itemInput = document.getElementById("itemInput");
+  const addItemBtn = document.getElementById("addItemBtn");
+  const shoppingList = document.getElementById("shoppingList");
+
+  addItemBtn.addEventListener("click", function() {
+    const newItemText = itemInput.value.trim();
+    if (newItemText !== "") {
+      const li = document.createElement("li");
+      li.textContent = newItemText;
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Delete";
+      deleteBtn.classList.add("deleteBtn");
+      deleteBtn.addEventListener("click", function() {
+        shoppingList.removeChild(li);
+        console.log("Item deleted:", newItemText);
+      });
+      li.appendChild(deleteBtn);
+      shoppingList.appendChild(li);
+      itemInput.value = "";
+      console.log("Item added:", newItemText);
+    } else {
+      alert("Please enter an item!");
+    }
+  });
+
+  // Animasi warna teks Shopping List
+  setInterval(function() {
+    const h1 = document.querySelector("h1");
+    h1.style.color = "#f00"; // Ganti warna ke merah
+    setTimeout(function() {
+      h1.style.color = "#333"; // Kembali ke warna hitam setelah 500ms
+    }, 500);
+  }, 2000); // Ganti warna setiap 2 detik
+});
+</script>
+</body>
+</html>

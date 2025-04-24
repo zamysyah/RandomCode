@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuis 07: jQuery Events</title>
+<!-- Memasukkan library jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- Memasukkan script kuis07.js -->
+<script src="kuis07.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #output {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Kuis 07: jQuery Events</h2>
+    <button id="btn-click">Click Me</button>
+    <button id="btn-dblclick">Double Click Me</button>
+    <button id="btn-mouseenter">Mouse Enter</button>
+    <button id="btn-mouseleave">Mouse Leave</button>
+    <button id="btn-hover">Hover Me</button>
+    <div id="output"></div>
+</div>
+
+</body>
+</html>

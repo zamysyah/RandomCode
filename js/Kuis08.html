@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuis 08</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100vh;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        margin: 10px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: white;
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box" id="box1">Box 1</div>
+    <div class="box" id="box2">Box 2</div>
+    <div class="box" id="box3">Box 3</div>
+    <div class="box" id="box4">Box 4</div>
+    <div class="box" id="box5">Box 5</div>
+</div>
+
+<div class="button-container">
+    <button class="button" id="slideToggleBtn">Slide Toggle</button>
+    <button class="button" id="swingBtn">Swing</button>
+    <button class="button" id="fadeOutBtn">Fade Out</button>
+    <button class="button" id="slideUpBtn">Slide Up</button>
+    <button class="button" id="animateBtn">Animate</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="kuis08.js"></script>
+</body>
+</html>
